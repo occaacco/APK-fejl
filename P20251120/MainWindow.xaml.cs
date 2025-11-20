@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Microsoft.Win32;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,27 @@ namespace P20251120
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void menuitem_Open(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.ShowDialog();
+        }
+
+        private void menuitem_Save(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.ShowDialog();
+        }
+
+        private void menuitem_Exit(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+        private void menuitem_New(object sender, RoutedEventArgs e)
+        {
+            edit.Visibility = Visibility.Visible;
         }
     }
 }

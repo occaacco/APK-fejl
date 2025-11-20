@@ -6,7 +6,31 @@
         xmlns:local="clr-namespace:P20251120"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_New" Click="menuitem_New"/>
+                <MenuItem Header="_Open" Click="menuitem_Open" />
+                <MenuItem Header="_Save" Click="menuitem_Save" />
+                <Separator />
+                <MenuItem Header="_Exit" Click="menuitem_Exit" />
+                <Separator />
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Command="Cut" />
+                <MenuItem Command="Copy" />
+                <MenuItem Command="Paste" />
+            </MenuItem>
+            <MenuItem Header="_Tools">
+                <MenuItem Header="_Manage users">
+                    <MenuItem.Icon>
+                        <Image Source="/WpfTutorialSamples;component/Images/user.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="_Show groups" IsCheckable="True" IsChecked="True" />
+            </MenuItem>
+        </Menu>
+        <TextBlock x:Name="edit" Visibility="Visible" Width="300" Height="300" IsEnabled="False"></TextBlock>
+        <TextBox x:Name="szoveg"></TextBox>
+    </DockPanel>
 </Window>
