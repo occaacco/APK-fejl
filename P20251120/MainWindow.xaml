@@ -30,7 +30,6 @@
                 <MenuItem Header="_Show groups" IsCheckable="True" IsChecked="True" />
             </MenuItem>
         </Menu>
-        <TextBlock x:Name="edit" Visibility="Visible" Width="300" Height="300" IsEnabled="False"></TextBlock>
-        <TextBox x:Name="szoveg"></TextBox>
+        <TextBox x:Name="szoveg" IsEnabled="False"></TextBox>
     </DockPanel>
 </Window>

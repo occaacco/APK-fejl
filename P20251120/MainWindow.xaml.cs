@@ -22,6 +22,11 @@ namespace P20251120
             InitializeComponent();
         }
 
+        private void menuitem_New(object sender, RoutedEventArgs e)
+        {
+            szoveg.IsEnabled = true;
+        }
+
         private void menuitem_Open(object sender, RoutedEventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -37,10 +42,6 @@ namespace P20251120
         private void menuitem_Exit(object sender, RoutedEventArgs e)
         {
             Close();
-        }
-        private void menuitem_Click(object sender, RoutedEventArgs e)
-        {
-            edit.Visibility = Visibility.Visible;
         }
     }
 }
