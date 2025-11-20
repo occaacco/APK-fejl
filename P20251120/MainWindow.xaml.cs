@@ -38,7 +38,7 @@ namespace P20251120
         {
             Close();
         }
-        private void menuitem_New(object sender, RoutedEventArgs e)
+        private void menuitem_Click(object sender, RoutedEventArgs e)
         {
             edit.Visibility = Visibility.Visible;
         }
